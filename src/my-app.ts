@@ -1,6 +1,3 @@
-/// <reference path="../bower_components/polymer-decorators/global.d.ts" />
-/// <reference path="polymer.d.ts" />
-
 @Polymer.decorators.customElement('my-app')
 class MyApp extends Polymer.Element {
 
@@ -21,6 +18,9 @@ class MyApp extends Polymer.Element {
     @Polymer.decorators.property({type: String})
     rootPath: string;
 
+    @Polymer.decorators.query('#drawer')
+    drawer: any; //todo type
+
 
     @Polymer.decorators.observe('routeData.page')
     _routePageChanged(page: string|null) {
@@ -29,8 +29,8 @@ class MyApp extends Polymer.Element {
         this.page = page || 'view1';
 
         // Close a non-persistent drawer when the page & route are changed.
-        if (!this.$.drawer.persistent) {
-            this.$.drawer.close();
+        if (!this.drawer.persistent) {
+            this.drawer.close();
         }
     }
 
