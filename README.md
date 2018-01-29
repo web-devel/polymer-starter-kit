@@ -1,6 +1,6 @@
 ⚠ Very basic example of using TypeScript and [polymer-decorators](https://github.com/polymer/polymer-decorators)
 
-use `npm build` and `npm serve` instead of `polymer serve` and `polymer build` 
+use `npm build` and `npm run serve` instead of `polymer serve` and `polymer build` 
 
 # Polymer App Toolbox - Starter Kit
 

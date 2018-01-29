@@ -19,7 +19,7 @@ class MyApp extends Polymer.Element {
     rootPath: string;
 
     @Polymer.decorators.query('#drawer')
-    drawer: any; //todo type
+    drawer: {persistent: boolean, close: () => {}}; //todo type
 
 
     @Polymer.decorators.observe('routeData.page')
